@@ -1,0 +1,21 @@
+/* src/Card.css */
+
+.card {
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 200px;
+}
+
+.card-count {
+  font-size: 2em;
+  margin: 0;
+}
+
+.card-description {
+  font-size: 1em;
+  margin: 10px 0 0;
+}

@@ -1,0 +1,64 @@
+/* src/CallLogTable.css */
+
+.call-log-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.call-log-table th,
+.call-log-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.call-log-table th {
+  background-color: #f2f2f2;
+}
+
+.call-log-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.call-log-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.call-log-table button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+/* src/SubscriptionIndicator.css */
+
+.subscription-indicator {
+  padding: 20px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.subscription-indicator.subscribed {
+  background-color: #e0ffe0;
+  border-color: #00cc00;
+}
+
+.subscription-indicator.unsubscribed {
+  background-color: #ffe0e0;
+  border-color: #cc0000;
+}
+
+.subscription-indicator button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscription-indicator button:hover {
+  opacity: 0.8;
+}

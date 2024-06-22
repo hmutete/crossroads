@@ -1,0 +1,9 @@
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.sidebar .MuiDrawer-paper {
+  width: 240px;
+  box-sizing: border-box;
+}
