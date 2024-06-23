@@ -1,9 +1,14 @@
-import React from 'react';
-import '../styles/CallLogTable.css'; 
+import React from "react";
+import "../styles/CallLogTable.css";
+import { Button, Container, Typography } from "@material-ui/core";
 
 const CallLogTable = ({ data, onView, onEdit, onDelete }) => {
-  const handleUnsubscribe= ()=>{alert('Opens form to for unsubscribe from the application')};
-  const handleSubscribe =() =>{alert('Opens form to for subscribing on to the application')};
+  const handleUnsubscribe = () => {
+    alert("Opens form to for unsubscribe from the application");
+  };
+  const handleSubscribe = () => {
+    alert("Opens form to for subscribing on to the application");
+  };
   return (
     <table className="call-log-table">
       <thead>
@@ -23,20 +28,25 @@ const CallLogTable = ({ data, onView, onEdit, onDelete }) => {
             <td>{call.caller}</td>
             <td>{call.time}</td>
             <td>{call.duration}</td>
-            <td>{call.sub}
-               <div className={`subscription-indicator ${call.sub ? 'subscribed' : 'unsubscribed'}`}>
-      <p>{call.sub ? 'Subscribed!' : 'Not subscribed.'}</p>
-      {call.sub ? (
-        <button onClick={handleUnsubscribe}>Unsubscribe</button>
-      ) : (
-        <button onClick={handleSubscribe}>Subscribe</button>
-      )}
-    </div>
+            <td>
+              {call.sub}
+              <div
+                className={`subscription-indicator ${
+                  call.sub ? "subscribed" : "unsubscribed"
+                }`}
+              >
+                <p>{call.sub ? "Subscribed!" : "Not subscribed."}</p>
+                {call.sub ? (
+                  <Button onClick={handleUnsubscribe}>Unsubscribe</Button>
+                ) : (
+                  <Button onClick={handleSubscribe}>Subscribe</Button>
+                )}
+              </div>
             </td>
             <td>
-              <button onClick={() => onView(call.id)}>View</button>
-              <button onClick={() => onEdit(call.id)}>Edit</button>
-              <button onClick={() => onDelete(call.id)}>Delete</button>
+              <Button onClick={() => onView(call.id)}>View</Button>
+              <Button onClick={() => onEdit(call.id)}>Edit</Button>
+              <Button onClick={() => onDelete(call.id)}>Schedule call</Button>
             </td>
           </tr>
         ))}
